@@ -1,0 +1,9 @@
+Step 1 : Save Prog10.js
+Step 2 : Then open cmd type node Prog10.js
+@This will start the server on port 10000. If port 10000 is already in use, 
+the server will automatically try the next available port.
+@Now, if you open your web browser and go to http://localhost:10000/, you should 
+see the message "Hello world, This is my Node.js server" displayed.
+Step 3 : If you want to dynamically find a free port, 
+you can run the Prog10B.js
+@This modification will increment the port number until it finds an available one.

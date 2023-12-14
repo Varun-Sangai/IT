@@ -1,0 +1,25 @@
+Creating a complete implementation for your requirements involves both client-side 
+(HTML, JavaScript) and server-side (Node.js with Express, MySQL) code. Below is a 
+simple example to get you started. Please note that this is a basic example, and you
+ may need to enhance it based on your specific requirements.
+
+Step 1 : Server-side code (Node.js with Express and MySQL)
+Install the necessary Node.js packages
+Open cmd and type
+npm install express mysql
+
+Step 2 : Create a file named prog12.js
+
+Step 3 : 2. Client-side code (HTML)
+Create a file named prog12.html:
+
+Step 4 : 3. Create a "public" directory and place prog12.html inside it.
+Run your Node.js server:
+Open cmd and run node prog12.js
+
+Visit http://localhost:3000 in your browser to access the HTML page and test the sign-in and sign-up functionality.
+
+Please replace the placeholder values in the server code (MySQL credentials) with your
+actual database information. Additionally, consider using secure practices for 
+handling passwords (e.g., hashing). This example provides a basic structure that you
+can build upon based on your project's requirements.

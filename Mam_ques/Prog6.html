@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+        .griddisplay{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .btn{
+            background-color: #081226;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            color: #ffffff;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nostrum mollitia, quisquam beatae molestias consequuntur ullam voluptatibus hic doloribus velit recusandae, quibusdam perferendis nam similique totam blanditiis, aut nihil autem dolorem! Neque doloremque voluptate expedita dolores? Voluptatum obcaecati sunt repellendus! Consequuntur, nulla. Corporis, vero. Tempore, doloribus earum debitis quae fugiat veritatis tenetur modi officiis voluptate obcaecati nisi molestias voluptas in ducimus ipsam rerum aut laboriosam nesciunt. Provident id, magni laborum animi eius aspernatur est at ab officia esse accusamus similique aut sapiente aperiam maiores et autem earum? Commodi, asperiores, reprehenderit amet ratione ipsum a laudantium, debitis iure mollitia quas esse. Libero dolores tenetur maxime quis odio perferendis dolorem sapiente excepturi quibusdam maiores accusamus, vero iure nam sed eum harum officiis nemo totam dicta quisquam veritatis repudiandae. Modi nesciunt labore explicabo officiis animi, ad nisi, eum aperiam totam distinctio libero asperiores sed beatae dolorem fugiat itaque consectetur recusandae in dolore, debitis magni eligendi quidem earum nam! Natus, dolores fugit? Quidem officia, nulla magnam consequatur id nobis dignissimos perferendis repudiandae atque delectus dolorum enim et deleniti esse error laborum, excepturi in blanditiis nesciunt totam provident. Vitae necessitatibus libero omnis non iure nobis atque quaerat earum adipisci, vel obcaecati id aperiam facilis illum?
+        </p>
+        <div class="griddisplay">
+            <button onclick="Red()" class="btn">
+                Red
+            </button>
+            <button onclick="Green()" class="btn">
+                Green                
+            </button>
+            <button onclick="Blue()" class="btn">
+                Blue
+            </button>
+            <button onclick="font10()" class="btn">
+                10                
+            </button>
+            <button onclick="font20()" class="btn">
+                20
+            </button>
+            <button onclick="font30()" class="btn">
+                30
+            </button>
+            <button onclick="Arial()" class="btn">
+                Arial
+            </button>
+            <button onclick="Cambria()" class="btn">
+                Cambria
+            </button>
+            <button onclick="Georgia()" class="btn">
+                Georgia
+            </button>
+        </div>
+    </main>
+    <script>
+        function Georgia(){
+            document.getElementById('para').style.fontFamily="Georgia"
+        }
+        function Cambria(){
+            document.getElementById('para').style.fontFamily="Cambria"
+        }
+        function Arial(){
+            document.getElementById('para').style.fontFamily="Arial"
+        }
+        function font30(){
+            document.getElementById('para').style.fontSize="30px"
+        }
+        function font20(){
+            document.getElementById('para').style.fontSize="20px"
+        }
+        function font10(){
+            document.getElementById('para').style.fontSize="10px"
+        }
+        function Red(){
+            document.getElementById('para').style.color="red"
+        }
+        function Green(){
+            document.getElementById('para').style.color="green"
+        }
+        function Blue(){
+            document.getElementById('para').style.color="blue"
+        }
+    </script>
+</body>
+</html>

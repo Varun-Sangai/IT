@@ -1,0 +1,104 @@
+####################################################################################
+Program
+
+Step 1 : Ping :
+# Open cmd and type " ping IpAddress/Website link " and then press enter
+Here IP Address is the ip address of system you want to check or ping
+And Website link could be any in form www.google.com or chat.openai.com
+
+If you receive a response with round-trip times and no errors, it indicates 
+that the systems are connected.
+; 
+
+Step 2 : Tracert  
+To trace the route to the target system, use the following command:
+# tracert <IP_Address_of_Target_System>
+This command will show you the route taken to reach the target system.
+
+Step 3 : List Processes Using Ports 
+you can use the netstat command. 
+@Open cmd and type ( netstat -ano | find "TCP" )
+This will display a list of processes using TCP ports along with their Process IDs (PID). 
+
+To find detailed information about a specific PID,
+you can use the Task Manager or the tasklist command:
+@ Open cmd type ( tasklist /fi "pid eq <PID>" )
+
+####################################################################################
+Description : 
+
+Ping: 
+The PING command is used to test the connection and latency between two network 
+connections. The PING command sends packets of information to a specified 
+IP Address and then measures the time it takes to get a response from the specified 
+computer or device.
+
+This command sends a series of ICMP (Internet Control Message Protocol) echo request
+packets to the specified host (in this case, "www.example.com") and displays the 
+round-trip time for each packet.
+
+After you run the command , If the website is up and actively responding, you 
+receive replies back from the server that you pinged with the following information:
+  a. The IP address
+  b. The number of Bytes sent
+  c. The time it took in milliseconds
+  d. Any information loss during transit
+
+####################################################################################
+
+Tracert:
+
+The TRACERT command which means trace route is used to conduct a similar test to 
+PING, but instead of displaying the time it takes to connect, it looks at the exact 
+server hops required to connect your computer to the server.
+
+This command sends packets to the destination with increasing Time-to-Live (TTL) 
+values, causing routers along the path to respond with ICMP time exceeded messages. 
+By analyzing these responses, traceroute can determine the route packets take to 
+reach the destination.
+
+After you run the command , If the website is up and actively responding, you 
+receive replies back from the server that you pinged with the following information:
+  a. The number of hops to reach the server from your computer.
+
+Both ping and traceroute are valuable tools for network troubleshooting. Ping helps 
+you check basic connectivity and measure latency, while traceroute provides insights
+into the path packets take through the network, helping identify potential issues or
+bottlenecks. Keep in mind that some networks may block or limit responses to ICMP 
+packets, which can affect the accuracy of these tools in certain situations.
+
+####################################################################################
+
+Netstat : 
+
+netstat, which stands for "network statistics," is a command-line tool used to display
+various network-related information on a computer running a TCP/IP protocol stack. 
+It is available on most operating systems, including Windows, Linux, and Unix-like 
+systems. The netstat command provides information about network connections, routing
+tables, interface statistics, masquerade connections, and other network-related 
+details.
+
+Here are some common uses of the netstat command: 
+
+1. netstat -a
+This command shows all active network connections, including listening and 
+established connections.
+
+2. netstat -l
+This command shows all listening ports on the system.
+
+3. netstat -s 
+This command displays various network statistics, such as the number of packets sent
+and received.
+
+4. netstat -r
+This command shows the routing table, indicating how network traffic is directed.
+
+5. netstat -p
+This command shows the Process ID (PID) associated with each network connection.
+
+6. netstat -e
+This command provides extended information, including Ethernet statistics.
+
+
+####################################################################################

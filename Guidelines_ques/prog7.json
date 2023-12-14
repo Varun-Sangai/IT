@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Buddy",
+      "age": 3,
+      "weight": 15,
+      "type": "Dog",
+      "likes": "Playing fetch"
+    },
+    {
+      "name": "Whiskers",
+      "age": 2,
+      "weight": 5,
+      "type": "Cat",
+      "likes": "Napping in the sun"
+    },
+    {
+      "name": "Rocky",
+      "age": 4,
+      "weight": 10,
+      "type": "Hamster",
+      "likes": "Running on the wheel"
+    }
+  ]

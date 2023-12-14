@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+<!-- Sample UL list with 5 items -->
+<ul id="myList">
+  <li id="item1">Item 1</li>
+  <li id="item2">Item 2</li>
+  <li id="item3">Item 3</li>
+  <li id="item4">Item 4</li>
+  <li id="item5">Item 5</li>
+</ul>
+
+<script>
+  // Retrieve the 3rd list item using DOM manipulation
+  const thirdListItem = document.getElementById("item3");
+
+  // Check if the 3rd list item exists before changing its attributes
+  if (thirdListItem) {
+    // Change the attributes of the 3rd list item
+    thirdListItem.textContent = "Updated Item 3";
+    thirdListItem.style.color = "blue";
+    // Add or modify other attributes as needed
+  } else {
+    console.log("Error: Unable to find the 3rd list item.");
+  }
+</script>
+
+</body>
+</html>

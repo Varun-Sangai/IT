@@ -1,0 +1,15 @@
+Step 1 : create a JSON file named prog7.json with the JSON data of a few pets. You 
+can copy the console output from the prog6.html and paste it into the 
+prog7.json file.
+
+Step 2 : create an HTML file that uses AJAX to load the data from the pets.json file
+and displays it in a presentable way using HTML and CSS.
+
+@This HTML file uses AJAX to load the data from pets.json and then dynamically 
+creates HTML elements to display the pet information. The styling is kept simple for
+demonstration purposes, and you can customize it further based on your preferences.
+
+
+
+
+

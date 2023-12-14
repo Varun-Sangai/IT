@@ -1,0 +1,49 @@
+###################################################################################
+Program 
+
+Step 1 : Run ipconfig in cmd 
+
+Step 2 : Find your IP address and subnet mask:
+Look for the "IPv4 Address" and "Subnet Mask" entries for the network adapter you're using.
+
+Note : If you are connected to a Wi-Fi network, you should look for the information under the 
+"Wireless LAN adapter WiFi" section. If you are using a wired connection, you might 
+find it under "Wireless LAN adapter Local Area Connection * 2" or a similar name.
+
+Step 3 : Calculate Network address : 
+Perform a bitwise AND operation between your IP address and the subnet mask. 
+
+Step 4 : Calculate the Maximum Number of Systems:
+Formula = 2^(32 - subnet mask length) or 2^Host bits
+Subnet Mask Length = No. of Network bits
+
+Step 5 : Determine the Range of IP Addresses:
+The range typically goes from the network address to the broadcast address.
+That is all host bits 0 to 1 excluding network and broadcast address
+Example Network address = 192.168.1.0 so Range is 192.168.1.1 to 192.168.1.254
+
+###################################################################################
+
+Description about ipconfig  => 
+The "ipconfig" command is a command-line tool used in Windows operating systems to
+display and manage the network configuration of a computer. 
+When you run "ipconfig" in the Command Prompt, 
+it provides information about the computer's IP configuration, 
+including the IP address, subnet mask, and default gateway for each 
+network interface.
+
+1. ipconfig /all: Displays detailed information about all network interfaces, 
+including physical and virtual adapters, along with additional information 
+such as DNS servers, DHCP server, and more.
+
+2. ipconfig /release: Releases the IP address assigned to all network interfaces.
+
+3. ipconfig /renew: Renews the IP address for all network interfaces. 
+This is often used to obtain a new IP address from a DHCP server.
+
+4. ipconfig /flushdns: Flushes and resets the DNS resolver cache,
+ which can be useful for resolving DNS-related issues.
+
+############################################################################################
+
+

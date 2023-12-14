@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <table id="multiplication-table">
+        <!-- Table rows will be dynamically added here -->
+    </table>
+
+    <script>
+        function createMultiplicationTable() {
+            const table = document.getElementById('multiplication-table');
+            let rowNumber = 2;
+            let intervalId = setInterval(() => {
+                if (rowNumber > 10) {
+                    clearInterval(intervalId);
+                    return;
+                }
+
+                const row = document.createElement('tr');
+                for (let i = 2; i <= 10; i++) {
+                    const cell = document.createElement('td');
+                    const product = rowNumber * i;
+                    cell.textContent = `${rowNumber} x ${i} = ${product}`;
+                    row.appendChild(cell);
+                }
+
+                // Apply styles
+                const fontSize = rowNumber*2 + 12; // Increase font size
+                const color = getRandomColor();
+                row.style.fontSize = `${fontSize}px`;
+                row.style.color = color;
+
+                table.appendChild(row);
+                rowNumber++;
+            }, 2000); // Add a new row every 2 seconds
+
+            // Generate a random color
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        }
+
+        createMultiplicationTable();
+    </script>
+</body>
+</html>

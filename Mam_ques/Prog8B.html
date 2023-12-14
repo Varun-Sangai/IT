@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            // Function to sort an array in ascending order
+function sortArrayAscending(arr) {
+    return arr.slice().sort(function (a, b) {
+      return a - b;
+    });
+  }
+  
+  // Function to sort an array in descending order
+  function sortArrayDescending(arr) {
+    return arr.slice().sort(function (a, b) {
+      return b - a;
+    });
+  }
+  
+  // Example array
+  const originalArray = [5, 2, 8, 1, 9, 3];
+  
+  // Sorting in ascending order
+  const sortedArrayAsc = sortArrayAscending(originalArray);
+  console.log("Sorted Array (Ascending):", sortedArrayAsc);
+  
+  // Sorting in descending order
+  const sortedArrayDesc = sortArrayDescending(originalArray);
+  console.log("Sorted Array (Descending):", sortedArrayDesc);
+  
+        </script>
+    </head>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>function isPositiveInteger(num) {
+            return Number.isInteger(num) && num > 0 && num >= 2 && num <= 100;
+          }
+          
+          function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+              if (num % i === 0) {
+                return false;
+              }
+            }
+            return true;
+          }
+          
+          function generateFibonacciSeries(n) {
+            const series = [0, 1];
+            for (let i = 2; i < n; i++) {
+              series[i] = series[i - 1] + series[i - 2];
+            }
+            return series;
+          }
+          
+          function calculateFactorial(num) {
+            if (num === 0 || num === 1) {
+              return 1;
+            }
+            return num * calculateFactorial(num - 1);
+          }
+          
+          const userInput = prompt("Enter a positive integer between 2 and 100:");
+          
+          const inputNumber = parseInt(userInput);
+          
+          if (isPositiveInteger(inputNumber)) {
+            if (isPrime(inputNumber)) {
+              const fibonacciSeries = generateFibonacciSeries(inputNumber);
+              console.log(`Fibonacci Series till ${inputNumber}:`, fibonacciSeries);
+            } else {
+              const factorialResult = calculateFactorial(inputNumber);
+              console.log(`Factorial of ${inputNumber}:`, factorialResult);
+            }
+          } else {
+            console.log("Please enter a valid positive integer between 2 and 100.");
+          }
+          </script>
+    </head>
+</html>

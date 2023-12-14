@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Tables</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentRow = 2;
+
+            function generateTable() {
+                let table = document.createElement('table');
+                let tbody = document.createElement('tbody');
+
+                for (let i = 1; i <= 10; i++) {
+                    let row = tbody.insertRow();
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+
+                    cell1.textContent = currentRow + " x " + i;
+                    cell2.textContent = currentRow * i;
+                }
+
+                table.appendChild(tbody);
+                document.body.appendChild(table);
+
+                // Set styles for the current table
+                table.style.fontSize = currentRow * 2 + "px";
+                table.style.color = getRandomColor();
+
+                currentRow++;
+
+                // Remove the previous table after 5 seconds
+                setTimeout(() => {
+                    document.body.removeChild(table);
+                }, 5000);
+            }
+
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // Run the function every 5 seconds using setInterval
+            setInterval(generateTable, 5000);
+        });
+    </script>
+</body>
+</html>
